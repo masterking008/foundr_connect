@@ -1,0 +1,152 @@
+  <app-navbar [forceDarkBg]="true"></app-navbar>
+
+<!-- Login Page Hero Section with black background -->
+<!-- <section class="relative bg-black text-white min-h-screen flex items-center justify-center overflow-hidden sharp">
+  <div class="absolute inset-0">
+    <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=1500&q=80" alt="Login Startup" class="w-full h-full object-cover object-center opacity-30" />
+    <div class="absolute inset-0 bg-black opacity-70"></div>
+  </div>
+  <div class="container mx-auto px-4 z-10 flex flex-col items-center justify-center">
+    <div class="flex flex-col items-center animate-fade-in">
+      <h1 class="text-7xl md:text-9xl font-bold mb-4 text-center drop-shadow-lg">LOGIN</h1>
+      <p class="text-xl md:text-3xl mb-8 text-center max-w-2xl">Access your Startup Mentorship Network account.</p>
+    </div>
+  </div>
+</section> -->
+<section class="relative bg-slate-50 text-slate-800 min-h-screen flex items-center justify-center overflow-hidden rounded-professional">
+
+<!-- <section class="py-16 section-light sharp"> -->
+  <div class="container mx-auto px-4">
+    <div class="max-w-md mx-auto bg-white rounded-professional shadow-lg overflow-hidden border border-slate-200">
+      <!-- Header -->
+      <div class="bg-slate-800 p-6 text-white border-b border-slate-300">
+        <h2 class="text-3xl md:text-4xl font-bold text-center">LOGIN</h2>
+        <!-- <p class="text-xl md:text-2xl text-center mt-2">Log in to your account</p> -->
+      </div>
+
+      <!-- Login Type Tabs -->
+      <div class="flex">
+        <button
+          (click)="toggleLoginType()"
+          [ngClass]="{
+            'bg-slate-800 text-white': isStartupLogin,
+            'bg-slate-100 text-slate-800': !isStartupLogin
+          }"
+          class="flex-1 py-3 px-4 text-center font-medium focus:outline-none transition-colors rounded-professional border-r border-slate-300"
+        >
+          STARTUP LOGIN
+        </button>
+        <button
+          (click)="toggleLoginType()"
+          [ngClass]="{
+            'bg-slate-800 text-white': !isStartupLogin,
+            'bg-slate-100 text-slate-800': isStartupLogin
+          }"
+          class="flex-1 py-3 px-4 text-center font-medium focus:outline-none transition-colors rounded-professional"
+        >
+          MENTOR LOGIN
+        </button>
+      </div>
+
+      <!-- Error Message -->
+      <div class="px-6 pt-4" *ngIf="errorMessage">
+        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 sharp mb-4">
+          {{ errorMessage }}
+        </div>
+      </div>
+
+      <!-- Login Form -->
+      <div class="p-6">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="mb-4">
+            <label for="email" class="block text-slate-800 text-sm font-bold mb-2">EMAIL ADDRESS</label>
+            <input
+              type="email"
+              id="email"
+              formControlName="email"
+              class="w-full px-3 py-2 border border-slate-300 bg-white text-slate-800 rounded-professional focus:outline-none focus:border-slate-500"
+              placeholder="Enter your email"
+            />
+            <div
+              *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid"
+              class="text-red-500 text-sm mt-1"
+            >
+              <div *ngIf="loginForm.get('email')?.errors?.['required']">
+                Email is required
+              </div>
+              <div *ngIf="loginForm.get('email')?.errors?.['email']">
+                Please enter a valid email
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <label for="password" class="block text-slate-800 text-sm font-bold mb-2">PASSWORD</label>
+            <input
+              type="password"
+              id="password"
+              formControlName="password"
+              class="w-full px-3 py-2 border border-slate-300 bg-white text-slate-800 rounded-professional focus:outline-none focus:border-slate-500"
+              placeholder="Enter your password"
+            />
+            <div
+              *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid"
+              class="text-red-500 text-sm mt-1"
+            >
+              <div *ngIf="loginForm.get('password')?.errors?.['required']">
+                Password is required
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center">
+              <input
+                type="checkbox"
+                id="remember"
+                class="h-4 w-4 border-white bg-black"
+              />
+              <label for="remember" class="ml-2 block text-sm text-slate-800">Remember me</label>
+            </div>
+            <a href="#" class="text-sm text-slate-600 hover:text-slate-800">Forgot password?</a>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-slate-800 text-white py-2 px-4 rounded-professional hover:bg-slate-700 focus:outline-none transition-colors"
+            [disabled]="isLoading"
+          >
+            <span *ngIf="isLoading">
+              <svg
+                class="animate-spin -ml-1 mr-2 h-4 w-4 text-black inline-block"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  class="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="4"
+                ></circle>
+                <path
+                  class="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
+              </svg>
+              LOGGING IN...
+            </span>
+            <span *ngIf="!isLoading">
+              LOGIN AS {{ isStartupLogin ? "STARTUP" : "MENTOR" }}
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

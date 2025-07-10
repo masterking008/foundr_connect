@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+
+<!-- Contact Page Hero Section with professional background -->
+<section
+  class="relative bg-slate-50 text-slate-800 min-h-screen flex items-center justify-center"
+>
+  <div class="container mx-auto px-4 py-16 md:py-24 lg:py-32 animate-fade-in">
+    <h2 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-center mb-12 text-slate-800">
+      MEET OUR TEAM
+    </h2>
+
+    <div
+      class=" mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 px-4 sm:px-6 lg:px-8 justify-items-center"
+    >
+      <ng-container *ngIf="teamMembers; else loading">
+        <app-contact-card
+          *ngFor="let member of teamMembers"
+          [name]="member.name"
+          [position]="member.position || ''"
+          [email]="member.email || ''"
+          [phone]="member.phone || ''"
+          [linkedin]="member.linkedin || ''"
+          [image]="member.profile_pic || ''"
+          class="w-full"
+        >
+        </app-contact-card>
+      </ng-container>
+      <ng-template #loading>
+        <div class="col-span-full flex justify-center items-center p-4">
+          <div class="animate-spin rounded-full h-16 w-16 sm:h-24 sm:w-24 md:h-32 md:w-32 border-t-2 border-b-2 border-slate-600"></div>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>
+

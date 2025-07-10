@@ -1,0 +1,119 @@
+<app-navbar></app-navbar>
+
+<!-- Hero Section with black background -->
+<section class="relative bg-slate-50 text-slate-800 min-h-screen flex items-center justify-center overflow-hidden ">
+  <div class="absolute inset-0">
+ 
+        <img src="assets/mentor2.jpg" alt="Get a Mentor" class="w-full h-full object-cover object-center blur-sm scale-110" />
+    <div class="absolute inset-0 bg-slate-50 opacity-10"></div>
+  </div>
+  <div class="container mx-auto px-4 z-10 flex flex-col items-center justify-center">
+    <div class="flex flex-col items-center animate-fade-in">
+      <h1 class="text-7xl md:text-9xl font-bold mb-6 text-center drop-shadow-lg text-white">GET A MENTOR</h1>
+      <p class="text-xl md:text-3xl mb-8 text-center max-w-2xl drop-shadow-lg text-white">Our mentor matching platform is coming soon. Sign up to be notified!</p>
+    </div>
+  </div>
+        <a (click)="scrollToBottom()" class="arrow-down animate-bounce absolute z-50 bottom-2 left-1/2 transform -translate-x-1/2 cursor-pointer text-[50px] pr-2">
+    <i class="fa-sharp fa-solid fa-arrow-down"></i>
+  </a>
+</section>
+
+
+<section class="py-16 bg-slate-50 rounded-professional relative overflow-hidden" #notified>
+
+  <div class="absolute inset-0 bg-white/40 z-10"></div>
+  <div class="container mx-auto px-4 text-center relative z-20">
+    <div class="max-w-3xl mx-auto mb-12">
+      <h3 class="text-5xl md:text-7xl font-bold mb-6 text-slate-800">BE THE FIRST TO KNOW</h3>
+      <p class="text-lg md:text-2xl text-slate-700 mb-6">
+        Sign up to be notified when our mentor matching platform launches.
+      </p>
+      <form class="max-w-md mx-auto" (ngSubmit)="submitNotifyForm()">
+        <div class="flex flex-col sm:flex-row gap-4">
+          <input 
+            type="email" 
+            placeholder="Enter your email" 
+            class="flex-grow px-4 py-2 border border-slate-300 rounded-professional focus:outline-none focus:border-slate-500"
+            [(ngModel)]="notifyEmail"
+            name="notifyEmail"
+            required
+          >
+          <button 
+            type="submit" 
+            class="bg-slate-800 text-white px-6 py-2 rounded-professional border border-slate-300 hover:bg-slate-700 transition-colors"
+            [disabled]="isSubmitting"
+          >
+            <span *ngIf="!isSubmitting">NOTIFY ME</span>
+            <span *ngIf="isSubmitting">Sending...</span>
+          </button>
+        </div>
+      
+        <div *ngIf="notifySuccess" class="text-black-600 mt-2">{{responseDetail}}</div>
+        <div *ngIf="notifyError" class="text-red-600 mt-2">Something went wrong. Please try again.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<!-- 
+<section class="py-16 section-light sharp">
+  <div class="container mx-auto px-4 text-center">
+    <div class="max-w-3xl mx-auto">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-black mx-auto mb-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      
+      <h2 class="text-7xl md:text-9xl font-bold mb-6 text-black">WE'RE WORKING ON SOMETHING AMAZING!</h2>
+      <p class="text-xl md:text-3xl text-black mb-8">
+        Our mentor matching platform is currently under development. Soon, you'll be able to connect with experienced mentors 
+        who can help guide your startup journey.
+      </p>
+    </div>
+  </div>
+</section> -->
+
+<section class="py-16 bg-slate-800 rounded-professional mx-3 ">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto">
+      <h3 class="text-5xl md:text-7xl font-bold mb-8 text-white text-center">WHAT TO EXPECT</h3>
+      <ul class="text-left space-y-8">
+        <li class="flex items-start">
+          <div class="bg-white rounded-professional p-3 mr-4">
+            <svg class="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <span class="text-lg md:text-2xl text-white"><strong>Personalized Matching:</strong> Connect with mentors who align with your industry and needs.</span>
+        </li>
+        <li class="flex items-start">
+          <div class="bg-white rounded-professional p-3 mr-4">
+            <svg class="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <span class="text-lg md:text-2xl text-white"><strong>Scheduling System:</strong> Easily book and manage mentorship sessions.</span>
+        </li>
+        <li class="flex items-start">
+          <div class="bg-white rounded-professional p-3 mr-4">
+            <svg class="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <span class="text-lg md:text-2xl text-white"><strong>Progress Tracking:</strong> Monitor your growth and development through the mentorship journey.</span>
+        </li>
+        <li class="flex items-start">
+          <div class="bg-white rounded-professional p-3 mr-4">
+            <svg class="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <span class="text-lg md:text-2xl text-white"><strong>Resource Library:</strong> Access valuable resources shared by mentors.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+      
+
+<app-footer></app-footer>

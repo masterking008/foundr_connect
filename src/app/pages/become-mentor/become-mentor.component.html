@@ -1,0 +1,115 @@
+<app-navbar></app-navbar>
+
+<!-- Become a Mentor Hero Section with black background -->
+<section class="relative bg-slate-50 text-slate-800 min-h-screen flex items-center justify-center overflow-hidden ">
+  <div class="absolute inset-0">
+    <img src="assets/mentor.jpg" alt="Become a Mentor" class="w-full h-full object-cover object-center blur-sm scale-110" />
+    <div class="absolute inset-0 bg-slate-50 opacity-10"></div>
+  </div>
+  <div class="container mx-auto px-4 z-10 flex flex-col items-center justify-center">
+    <div class="flex flex-col items-center animate-fade-in">
+      <h1 class="text-7xl md:text-9xl font-bold mb-4 text-center drop-shadow-lg text-white">BECOME A MENTOR</h1>
+      <p class="text-xl md:text-3xl mb-8 text-center max-w-2xl drop-shadow-lg text-white">Join our platform and help shape the next generation of startups.</p>
+    </div>
+    <div class="text-center">
+        <button routerLink="/mentor-registration" class="btn bg-slate-800 text-white hover:bg-slate-700 px-8 py-3 font-medium text-lg transition-colors rounded-professional border border-slate-300 animate-fade-in cursor-pointer">
+          REGISTER AS A MENTOR
+        </button>
+      </div>
+        <a (click)="scrollToBottom()" class="arrow-down animate-bounce absolute z-50 bottom-2 left-1/2 transform -translate-x-1/2 cursor-pointer text-[50px] pr-2">
+    <i class="fa-sharp fa-solid fa-arrow-down"></i>
+  </a>
+  </div>
+  
+</section>
+<!-- Who Can Become a Mentor Section -->
+<section class="py-16 relative section-light sharp overflow-hidden" #notified>
+  <div class="absolute inset-0 w-full h-full z-0 pointer-events-none">
+    <video 
+      src="https://2k21.s3.ap-south-1.amazonaws.com/emn/Hero.mp4"  
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      preload="auto"
+      class="w-full h-full object-cover"
+    ></video>
+    <div class="absolute inset-0 bg-white/80"></div>
+  </div>
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-5xl md:text-7xl font-bold mb-8 text-slate-800 text-center">WHO CAN BECOME A MENTOR?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div class="bg-white/90 p-6 rounded-professional border border-slate-200 shadow-sm">
+          <h3 class="text-xl md:text-2xl font-bold mb-4 text-slate-800">Industry Experts</h3>
+          <p class="text-lg md:text-xl text-slate-700 mb-4">
+            Professionals with significant experience in their respective industries who can provide valuable insights and guidance to startups.
+          </p>
+        </div>
+        <div class="bg-white/90 p-6 rounded-professional border border-slate-200 shadow-sm">
+          <h3 class="text-xl md:text-2xl font-bold mb-4 text-slate-800">Successful Entrepreneurs</h3>
+          <p class="text-lg md:text-xl text-slate-700 mb-4">
+            Founders who have built and scaled successful businesses and can share their journey, challenges, and lessons learned.
+          </p>
+        </div>
+        <div class="bg-white/90 p-6 rounded-professional border border-slate-200 shadow-sm">
+          <h3 class="text-xl md:text-2xl font-bold mb-4 text-slate-800">Investors</h3>
+          <p class="text-lg md:text-xl text-slate-700 mb-4">
+            Angel investors, VCs, and investment professionals who can provide funding perspectives and help startups become investment-ready.
+          </p>
+        </div>
+        <div class="bg-white/90 p-6 rounded-professional border border-slate-200 shadow-sm">
+          <h3 class="text-xl md:text-2xl font-bold mb-4 text-slate-800">Domain Specialists</h3>
+          <p class="text-lg md:text-xl text-slate-700">
+            Experts in specific domains such as technology, marketing, finance, legal, or operations who can provide specialized guidance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Become a Mentor Section -->
+<section class="py-16 bg-slate-800 rounded-professional mx-3">
+  <div class="container mx-auto px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-5xl md:text-7xl font-bold mb-8 text-white text-center">WHY BECOME A MENTOR?</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-slate-700 p-6 rounded-professional border border-slate-600 shadow-lg">
+          <div class="rounded-professional p-3 mb-3 mx-auto w-16 h-16 flex items-center justify-center">
+            <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+            </svg>
+          </div>
+          <h4 class="text-xl md:text-2xl font-bold mb-2 text-white">IMPACT THE FUTURE</h4>
+          <p class="text-lg md:text-xl text-slate-200">Help shape innovative ideas and contribute to the growth of promising startups.</p>
+        </div>
+        
+        <div class="bg-slate-700 p-6 rounded-professional border border-slate-600 shadow-lg">
+          <div class="rounded-professional p-3 mb-3 mx-auto w-16 h-16 flex items-center justify-center">
+            <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            </svg>
+          </div>
+          <h4 class="text-xl md:text-2xl font-bold mb-2 text-white">EXPAND YOUR NETWORK</h4>
+          <p class="text-lg md:text-xl text-slate-200">Connect with other mentors, investors, and innovative founders across industries.</p>
+        </div>
+        
+        <div class="bg-slate-700 p-6 rounded-professional border border-slate-600 shadow-lg">
+          <div class="rounded-professional p-3 mb-3 mx-auto w-16 h-16 flex items-center justify-center">
+            <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+          </div>
+          <h4 class="text-xl md:text-2xl font-bold mb-2 text-white">STAY AT THE CUTTING EDGE</h4>
+          <p class="text-lg md:text-xl text-slate-200">Gain insights into emerging technologies and innovative business models.</p>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>
