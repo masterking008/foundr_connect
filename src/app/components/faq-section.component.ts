@@ -19,7 +19,7 @@ interface FAQ {
 
       <div class="container mx-auto px-4 relative z-20">
         <h2 class="text-5xl md:text-7xl font-bold text-center mb-10 text-slate-800">
-          FAQS
+          FAQs
         </h2>
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div

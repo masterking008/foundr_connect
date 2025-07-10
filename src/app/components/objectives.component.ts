@@ -22,11 +22,11 @@ import { CommonModule } from '@angular/common';
   <!-- Overlay for readability -->
   <div class="absolute inset-0 z-10"></div>
   <div class="container mx-auto px-4 relative z-20">
-    <div class="max-w-4xl mx-auto mb-12">
+    <div class=" mb-12">
       <h2 class="text-5xl md:text-7xl font-bold mb-8 text-slate-800 text-center">
-        OBJECTIVES OF SMP
+        Objectives of foundr connect
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div
           class="bg-white/90 backdrop-blur-sm p-8 transform transition duration-300 relative rounded-professional border border-slate-200 shadow-sm"
         >

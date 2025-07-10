@@ -28,7 +28,7 @@ export class ContactComponent implements OnInit {
       id: 2, 
       name: 'Rohit Sharma',
       email: 'iitbrohitsharma@gmail.com',
-      position: 'Co-Founder & Executive Director',
+      position: 'Founder & Executive Director',
       phone: '8058352005',
       linkedin: 'https://www.linkedin.com/in/rohitsharma005/',
       profile_pic: 'assets/rohit.jpeg'

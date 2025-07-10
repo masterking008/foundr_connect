@@ -40,13 +40,13 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
     'bg-slate-800': forceDarkBg,
     'bg-transparent': !isScrolled && !forceDarkBg
   }"
-  class="fixed w-dvw z-[1000] "
+  class="fixed w-dvw z-[1000]"
 >
   <div class="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between h-20 ">
       <div class="flex items-center">
-        <a href="http://ecell.in/" target="_blank" class="flex-shrink-0 flex items-center">
-          <img class="h-12" src="assets/logo.webp" alt="E-Cell Logo" />
+        <a href="*" class="flex-shrink-0 flex items-center">
+          <img class="h-12" src="assets/fclogo.png" alt="E-Cell Logo" />
         </a>
       </div>
 
@@ -183,12 +183,12 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   <div 
     *ngIf="isMenuOpen"
     [@slideInOut]="isMenuOpen ? 'in' : 'out'" 
-    class="fixed bottom-0 left-0 right-0 z-[1001] lg:hidden bg-white shadow-lg rounded-professional rounded-t-xl border-t border-slate-200">
+    class="fixed bottom-0 left-0 right-0 z-[1001] lg:hidden bg-white shadow-lg rounded-t-4xl border-t border-slate-200">
     <div class="flex justify-end px-4 pt-3">
       <!-- Close button -->
-      <button >
+      <button
         (click)="closeMenu()" 
-        class="p-2 text-slate-700 hover:text-slate-900 focus:outline-none"
+        class="p-2 text-slate-700 hover:text-slate-900 focus:outline-none">
         <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
@@ -230,7 +230,10 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   </div>
 </nav>
 `,
-  styles: []
+  styles: [`
+    nav { 
+font-family: Plus Jakarta Sans, sans-serif;  
+font-weight: 600;   }`]
 })
 export class NavbarComponent {
   isMenuOpen = false;

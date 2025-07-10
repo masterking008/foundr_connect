@@ -10,7 +10,7 @@ import { ScrollToTopService } from './services/scroll-to-top.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  title = 'smn';
+  title = 'foundr_connect';
   
   constructor(private scrollToTopService: ScrollToTopService) {}
   

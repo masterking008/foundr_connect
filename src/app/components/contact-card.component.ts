@@ -6,8 +6,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl border border-gray-100 text-center transform transition-all duration-300 hover:-translate-y-1">
-      <img [src]="image" [alt]="name" class="w-60 h-60 mx-auto mb-6 object-cover rounded-full shadow-md hover:scale-105 transition-transform duration-300" draggable="false">
+    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl border border-gray-100 text-center transform transition-all duration-300 hover:-translate-y-1 min-h-[450px]">
+      <img [src]="image" [alt]="name" class="w-50 h-50 mx-auto mb-6 object-cover rounded-full shadow-md hover:scale-105 transition-transform duration-300" draggable="false">
       <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">{{ name }}</h3>
       <p class="text-lg md:text-xl text-gray-600 mb-4">{{ position }}</p>
       <div class="flex justify-center gap-8">

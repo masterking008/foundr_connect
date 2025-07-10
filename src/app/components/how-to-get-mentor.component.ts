@@ -9,7 +9,8 @@ import { CommonModule } from '@angular/common';
     <section class="py-12 md:py-16 lg:py-24 bg-slate-800 rounded-professional mx-3">
       <div class="container mx-auto px-4">
               <h2 class="text-5xl md:text-7xl font-bold text-center px-5 mb-8 md:mb-12 text-white">
-HOW TO GET A MENTOR?</h2>
+How To Get A Mentor?
+</h2>
         
         <div class="relative">
           <!-- Mobile view (vertical steps) -->
@@ -181,7 +182,7 @@ HOW TO GET A MENTOR?</h2>
                 <path d="M900,150 L100,350" stroke="white" stroke-width="15" fill="none" />
                 
                 <!-- Line from 3 to 4 -->
-                <path d="M100,350 L900,450" stroke="white" stroke-width="15" fill="none" />
+                <path d="M100,350 L900,420" stroke="white" stroke-width="15" fill="none" />
               </svg>
             </div>
           </div>

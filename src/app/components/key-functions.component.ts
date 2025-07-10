@@ -14,7 +14,7 @@ interface KeyFunction {
   template: `
     <section class="bg-slate-800 text-white font-sans flex flex-col items-center justify-start py-10 rounded-professional mx-3">
       <h2 class="text-5xl md:text-7xl font-bold text-center px-5 mb-8 md:mb-12 text-white">
-        KEY FUNCTIONS OF SMP
+        Key Functions of foundr connect
       </h2>
 
       <div class="flex flex-col md:flex-row xl:max-w-7xl w-full px-4 md:h-[500px] gap-4 md:gap-0 transition-all duration-300 ease-in-out">
@@ -24,7 +24,7 @@ interface KeyFunction {
               <h1 class="text-4xl md:text-3xl lg:text-5xl transition-all duration-300 ease-in-out">{{item.id}}</h1>
             </span>
             <div class="font-bold text-base md:text-lg md:rotate-90 group-hover:rotate-0 group-focus:rotate-0 group-active:rotate-0 group-hover:text-lg group-focus:text-lg group-active:text-lg group-hover:text-center group-focus:text-center group-active:text-center md:group-hover:text-xl md:group-focus:text-xl md:group-active:text-xl mb-4 transition-all duration-300 ease-in-out">
-              <h2 class="p-1 text-4xl md:text-2xl lg:text-4xl">{{item.title}}</h2>
+              <h2 class="p-1 text-2xl md:text-sm lg:text-xl text-center">{{item.title}}</h2>
             </div>
             <div class="hidden group-hover:block group-focus:block group-active:block text-base text-slate-200 px-4 md:px-6 text-center font-['Poppins']">
               {{item.description}}

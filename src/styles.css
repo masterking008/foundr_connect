@@ -1,26 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 
-/* Import Thunder font for headings */
-@font-face {
-  font-family: 'Thunder';
-  src: url('assets/Thunder-MediumLC.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Thunder';
-  src: url('assets/Thunder-SemiBoldLC.otf') format('opentype');
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Thunder';
-  src: url('assets/Thunder-BoldLC.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-}
+
 
 /* Import Neue Montreal font for normal text */
 @font-face {
@@ -43,10 +26,10 @@ body, html {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Thunder', Arial, Helvetica, sans-serif;
-  font-weight: 600;
+  font-family: Plus Jakarta Sans, Arial, Helvetica, sans-serif;
+  font-weight:800;
   letter-spacing: 0.02em;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 /* Glass effect */
@@ -75,12 +58,14 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.1rem;
   padding: 0.75rem 1.5rem;
   border-radius: 0.375rem;
+  box-shadow: 0 2px 6px rgba(30, 41, 59, 0.5);
 }
 
 .btn-primary {
   background-color: #1e293b;
   color: #fff;
   border: none;
+
 }
 
 .btn-primary:hover {

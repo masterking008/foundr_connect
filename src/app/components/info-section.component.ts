@@ -11,13 +11,13 @@ import { CommonModule } from '@angular/common';
       <div class="container mx-auto px-4 relative ">
         <div class="max-w-5xl mx-auto text-center">
           <h2 class="text-5xl md:text-7xl font-bold mb-8 text-slate-800">
-            WHAT IS SMP?
+            What is foundr connect?
           </h2>
 
           <p class="text-lg md:text-2xl text-slate-700 leading-relaxed">
-            Startup Mentorship Network (SMP) is a platform that connects
+            foundr connect is a platform that connects
             early-stage start-ups with experienced mentors to provide strategic
-            guidance, industry insights and hands-on support. SMP helps founders
+            guidance, industry insights and hands-on support. It helps founders
             refine ideas, solve challenges and grow faster, with the right
             people by their side.
           </p>
