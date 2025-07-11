@@ -52,15 +52,15 @@ export class ContactComponent implements OnInit {
       profile_pic: 'assets/priyanshu.jpeg'
     },
 
-    {
-      id: 3, 
-      name: 'Dinesh Sahu',
-      email: 'masterking008@gmail.com',
-      position: 'Designer & Web Developer',
-      phone: '8109286424', 
-      linkedin: 'https://linkedin.com/in/dineshsahu-ecell',
-      profile_pic: 'assets/dinesh-sahu.jpg'
-    }
+    // {
+    //   id: 3, 
+    //   name: 'Dinesh Sahu',
+    //   email: 'masterking008@gmail.com',
+    //   position: 'Designer & Web Developer',
+    //   phone: '8109286424', 
+    //   linkedin: 'https://linkedin.com/in/dineshsahu-ecell',
+    //   profile_pic: 'assets/dinesh-sahu.jpg'
+    // }
   ];
 
   constructor(private apiService: ApiService) {}
