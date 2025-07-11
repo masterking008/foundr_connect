@@ -92,7 +92,7 @@ export class FaqSectionComponent {
     },
     {
       question: "Is there a cost associated with getting a mentor?",
-      answer: "The Eureka! Mentorship Network provides free mentorship as part of our commitment to fostering innovation and entrepreneurship in the ecosystem.",
+      answer: "foundrConnect provides free mentorship as part of our commitment to fostering innovation and entrepreneurship in the ecosystem.",
       order: 3,
       open: false
     },

@@ -37,7 +37,7 @@ export class ContactComponent implements OnInit {
       id: 4,
       name: 'Mrunal Pachpande',
       email: 'mpachpande28@gmail.com',
-      position: 'Social Media Manager',
+      position: 'Cheif Operating Officer',
       phone: '8788331620',
       linkedin: 'https://linkedin.com/in/mrunal-pachpande',
       profile_pic: 'assets/mrunal.jpeg'

@@ -24,7 +24,7 @@ import { CommonModule } from '@angular/common';
   <div class="container mx-auto px-4 relative z-20">
     <div class=" mb-12">
       <h2 class="text-5xl md:text-7xl font-bold mb-8 text-slate-800 text-center">
-        Objectives of foundr connect
+        Objectives of foundrConnect
       </h2>
       <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div

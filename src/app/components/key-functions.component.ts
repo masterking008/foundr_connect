@@ -14,7 +14,7 @@ interface KeyFunction {
   template: `
     <section class="bg-slate-800 text-white font-sans flex flex-col items-center justify-start py-10 rounded-professional mx-3">
       <h2 class="text-5xl md:text-7xl font-bold text-center px-5 mb-8 md:mb-12 text-white">
-        Key Functions of foundr connect
+        Key Functions of foundrConnect
       </h2>
 
       <div class="flex flex-col md:flex-row xl:max-w-7xl w-full px-4 md:h-[500px] gap-4 md:gap-0 transition-all duration-300 ease-in-out">
